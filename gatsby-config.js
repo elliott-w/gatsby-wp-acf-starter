@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: process.env.WPGRAPHQL_URL || `http://www.content.local/graphql`,
+        url: process.env.WPGRAPHQL_URL || `http://www.yourwpwebsite.local/graphql`,
       },
     },
     `gatsby-transformer-sharp`,
