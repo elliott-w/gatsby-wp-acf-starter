@@ -95,6 +95,7 @@ const createPages = async (pages, gatsbyUtilities) => {
         // Assume there exists a js template file corresponding to the
         // slug-inated (definitely did not make that word up) version
         // of the template name
+        // TODO: Get rid of this and use src/pages/somepage.js
         const templateSlug = template.toLowerCase().replace(/\s/g, '-')
         const pageTemplate = path.resolve(`./src/templates/${templateSlug}.js`)
         return gatsbyUtilities.actions.createPage({
