@@ -1,0 +1,20 @@
+{
+  "name": "gatsby-wp-acf-starter",
+  "private": true,
+  "description": "Advanced Gatsby ACF Wordpress Starter",
+  "version": "1.0.0",
+  "author": "Elliott Wagener <elliott.wagener@hotmail.com>",
+  "dependencies": {
+    "gatsby": "^2.32.3",
+    "gatsby-source-wordpress": "^4.0.1",
+    "lodash.uniq": "^4.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
