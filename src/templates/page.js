@@ -2,7 +2,6 @@
 // to understand how this file ends up looking
 
 import React from 'react'
-import SEO from '../components/structural/seo'
 import { graphql } from 'gatsby'
 
 
@@ -20,7 +19,6 @@ const PageTemplate = pageProps => {
   })
   return (
     <>
-      <SEO title={data.title}/>
       {components.map((component, index) => {
         // ### COMPONENT RENDERING ### DO NOT MODIFY OR MOVE THIS COMMENT ###
         return <div>Error: The component {component.name} was not found</div>
