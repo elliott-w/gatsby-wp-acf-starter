@@ -162,6 +162,21 @@ const createTemporaryPageTemplateFile = (
     "from '../../src/"
   )
 
+  // Filter out non-existant components
+  componentNames = componentNames.filter(componentName => {
+    if (!existsSync(path.join(componentsFolder, componentName))) {
+      console.warn(
+        `Please create the ${path.join(
+          componentsFolder,
+          componentName
+        )} component`
+      )
+      return false
+    } else {
+      return true
+    }
+  })
+
   // Create the string which will import all the components this page needs
   const componentImportString = componentNames
     .map(componentName => {
