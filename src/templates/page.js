@@ -4,14 +4,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-
 // ### COMPONENT IMPORTS ### DO NOT MODIFY OR MOVE THIS COMMENT ###
 
 const PageTemplate = pageProps => {
-  let data
-  // ### DATA VARIABLE ### DO NOT MODIFY OR MOVE THIS COMMENT ###
-  const componentsArray = data.page_components.components || []
-  const components = componentsArray.map(component => {
+  let components
+  // ### COMPONENTS VARIABLE ### DO NOT MODIFY OR MOVE THIS COMMENT ###
+  components = components.map(component => {
     return {
       name: component.__typename.split('_').pop(),
       data: component,

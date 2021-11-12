@@ -1,5 +1,5 @@
 module.exports = () => {
   return `
-    title
+    content
   `
 }

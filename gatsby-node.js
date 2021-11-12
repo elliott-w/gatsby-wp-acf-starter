@@ -1,9 +1,19 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ * Based on: https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-node.js
+ */
+const createPosts = require('./create/createPosts')
+const { setOptions, createPages } = require('./create/createPages')
 
-const createPages = require('./create/createPages')
+setOptions({
+  postTypes: ['Page'],
+  graphQLFieldGroupName: 'pageComponents',
+  graphQLFieldName: 'pageComponents',
+})
 
-module.exports.createPagesStatefully = async gatsbyUtilities => {
-  // Assuming in your wordpress site you are registering a post type with
-  // graphql_single_name = project
-  await createPages({ postTypes: ['Page', 'Project'], gatsbyUtilities, })
+module.exports.createPages = async gatsbyUtilities => {
+  await createPages(gatsbyUtilities)
+  await createPosts(gatsbyUtilities)
 }
-
