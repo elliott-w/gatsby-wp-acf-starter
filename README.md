@@ -58,6 +58,6 @@ This is might be because the page has a flexible content field with no layouts i
 
 
 ```
-Running `gatsby clean` then `gatsby build` results in graphql query returning empty list of nodes for all post types when using a custom post type. 
+Running `gatsby clean` then `gatsby build` and then `gatsby build` again results in graphql query returning empty list [] of nodes for all post types when using a custom post type.
 ```
 Try deleting all posts from every post type (pages, posts, custom post type, etc) and then restoring them from trash. No idea why this works, but it does. Took me 5 hours to debug this one...
