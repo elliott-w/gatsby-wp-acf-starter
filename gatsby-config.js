@@ -11,7 +11,5 @@ module.exports = {
           process.env.WPGRAPHQL_URL || `http://www.yourwpwebsite.local/graphql`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   ],
 }
